@@ -34,7 +34,7 @@ export function Room() {
         .remove();
     } else {
       await database.ref(`rooms/${roomId}/questions/${questionId}/likes`).push({
-        author: user?.id,
+        authorId: user?.id,
       });
     }
   }
