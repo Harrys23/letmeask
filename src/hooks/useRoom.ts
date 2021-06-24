@@ -49,7 +49,6 @@ export function useRoom(roomId: string) {
 
       const parsedQuestions = Object.entries(firebaseQuestions).map(
         ([key, value]) => {
-          console.log(Object.entries(value.likes));
           return {
             id: key,
             content: value.content,
