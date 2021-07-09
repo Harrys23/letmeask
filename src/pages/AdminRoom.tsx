@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { FaPowerOff } from "react-icons/fa";
 
 import logoImg from "../assets/logo.svg";
@@ -9,6 +10,7 @@ import answerImg from "../assets/answer.svg";
 import { Button } from "../components/Button";
 import { Question } from "../components/Question";
 import { RoomCode } from "../components/RoomCode";
+import Modal from "../components/Modal";
 
 // import { useAuth } from "../hooks/useAuth";
 import { useRoom } from "../hooks/useRoom";
@@ -27,7 +29,10 @@ export function AdminRoom() {
 
   const { tittle, questions } = useRoom(roomId);
 
+  const [openModal, setOpenModal] = useState(false);
 
+  function handleOpenModal() {
+    setOpenModal((wasOpenModal) => !wasOpenModal);
   }
 
   async function handleDeleteQuestion(questionId: string) {
@@ -50,12 +55,14 @@ export function AdminRoom() {
 
   return (
     <div id="page-room">
+      {openModal && <Modal closeModal={handleOpenModal} />}
+
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
           <div>
             <RoomCode code={roomId} />
-            <Button isOutlined onClick={handleEndRoom}>
+            <Button isOutlined onClick={() => handleOpenModal()}>
               <FaPowerOff />
             </Button>
           </div>
