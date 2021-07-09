@@ -1,4 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
@@ -18,6 +21,17 @@ function App() {
 
           <Route path="/admin/rooms/:id" component={AdminRoom} />
         </Switch>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </AuthContextProvider>
     </BrowserRouter>
   );
