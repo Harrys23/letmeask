@@ -1,0 +1,26 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+
+  .modal-container {
+    width: min-content;
+    padding: 2rem;
+
+    background: #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+
+    .footer {
+      display: flex;
+      margin-top: 2rem;
+      gap: 1.5rem;
+    }
+  }
+}
