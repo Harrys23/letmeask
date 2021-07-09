@@ -28,3 +28,11 @@
     font-weight: 500;
   }
 }
+
+@media (max-width: 425px) {
+  .room-code {
+    span {
+      display: none;
+    }
+  }
+}
