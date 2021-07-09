@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { FaPowerOff } from "react-icons/fa";
 
 import logoImg from "../assets/logo.svg";
 import deleteImg from "../assets/delete.svg";
@@ -55,7 +56,7 @@ export function AdminRoom() {
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>
-              Encerrar sala
+              <FaPowerOff />
             </Button>
           </div>
         </div>
