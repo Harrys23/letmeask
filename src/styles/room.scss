@@ -111,3 +111,20 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  #page-room {
+    main {
+      margin: 0 1rem;
+
+      .form-footer {
+        flex-wrap: wrap;
+
+        button {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
