@@ -4,13 +4,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #fff;
+  --bg: #f8f8f8;
+  --header-line: #e2e2e2;
+  --border: #a8a8b3;
+  --blurry: #737380;
+  --font-color: #29292e;
+  --purple: #835afd;
+  --pink: #e559f9;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  background: #f8f8f8;
-  color: #29292e;
+  background: var(--bg);
+  color: var(--font-color);
   font-size: 1.6rem;
 }
 
@@ -19,4 +30,21 @@ input,
 button,
 textarea {
   font: 400 16px "Roboto", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: radial-gradient(circle, var(--purple) 0%, var(--pink));
+
+  border-radius: 6px;
 }

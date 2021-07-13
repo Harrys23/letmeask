@@ -1,7 +1,7 @@
 #page-room {
   header {
     padding: 2.4rem;
-    border-bottom: 0.1rem solid #e2e2e2;
+    border-bottom: 0.1rem solid var(--header-line);
 
     .content {
       max-width: 112rem;
@@ -38,15 +38,15 @@
       h1 {
         font-family: "Poppins", sans-serif;
         font-size: 2.4rem;
-        color: #29292e;
+        color: var(--font-color);
       }
 
       span {
         margin-left: 1.6rem;
-        background: #e559f9;
+        background: var(--pink);
         border-radius: 999.9rem;
         padding: 0.8rem 1.6rem;
-        color: #fff;
+        color: var(--white);
         font-weight: 500;
         font-size: 1.4rem;
       }
@@ -58,10 +58,12 @@
         border: 0;
         padding: 1.6rem;
         border-radius: 0.8rem;
-        background: #fefefe;
+        background: var(--white);
         box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
         resize: vertical;
         min-height: 13rem;
+        resize: none;
+        outline: none;
       }
 
       .form-footer {
@@ -82,7 +84,7 @@
 
           span {
             margin-left: 0.8rem;
-            color: #29292e;
+            color: var(--font-color);
             font-weight: 500;
             font-size: 1.4rem;
           }
@@ -90,13 +92,13 @@
 
         > span {
           font-size: 1.4rem;
-          color: #737380;
+          color: var(--blurry);
           font-weight: 500;
 
           button {
             background: transparent;
             border: 0;
-            color: #835afd;
+            color: var(--purple);
             text-decoration: underline;
             font-size: 1.4rem;
             font-weight: 500;
@@ -116,6 +118,14 @@
   #page-room {
     main {
       margin: 0 1rem;
+
+      .room-tittle {
+        flex-direction: column;
+
+        span {
+          margin-top: 1.6rem;
+        }
+      }
 
       .form-footer {
         flex-wrap: wrap;

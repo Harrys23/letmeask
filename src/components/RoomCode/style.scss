@@ -3,14 +3,14 @@
   border-radius: 0.8rem;
   overflow: hidden;
 
-  background: #fff;
-  border: 0.1rem solid #835afd;
+  background: var(--white);
+  border: 0.1rem solid var(--purple);
   cursor: pointer;
 
   display: flex;
 
   > div {
-    background: #835afd;
+    background: var(--purple);
     padding: 0 1.2rem;
     height: 100%;
     display: flex;
