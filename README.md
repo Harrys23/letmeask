@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# You can see functioning before clone in the link: https://letmeask-web-2ff79.web.app
+
 ## Available Scripts
 
 In the project directory, you can run:
